@@ -1,0 +1,121 @@
+%%% MISSING 
+
+\begin{document}
+
+%%% MISSING 
+
+\begin{abstract}
+This is a report --- written in the format of a ordinary report, thesis, or book --- explaining how a report, thesis or book is usually structured in within the natural sciences and mathematics. 
+The abstract is containing a short, concise description of the content of the material, which gives the reader a hint of possible relevance of the material to the reader. About ten lines is usually a good guideline for the length of an abstract.
+\end{abstract}
+
+
+%%% MISSING 
+
+The foreword often consists of the author's personal opinion, the history of how the work emerged, how the work is structured, how the reader can choose to read it etc. It might also contain dedications, acknowledgements and similar things. 
+
+%%% MISSING 
+
+An acknowledgement is a quite standard part of a scientific work. This is where all the thanks to those that made the work possible. Collaborators, students, colleagues, institutions or schools, family, financial support, supervisors/advisors etc. This might be added as a separate entry after the abstract, it might be written as a part of the foreword or as a section (usually the last) of the foreword, or sometimes --- especially for articles --- as either a footnote on first page or as the last section of the article. 
+
+%%% MISSING 
+
+The purpose of this report is in two parts:
+\begin{itemize}
+\item To train students in structuring a report, an article, or a thesis.
+\item To train students in using \LaTeX for writing scientific literature. 
+\end{itemize}
+This report is structured more or less like a usual book, thesis or long report in book format. The documentclass used is \texttt{book}. For a shorter report or an article, usually a documentclass like \texttt{report} or \texttt{article} is preferred (structuring the text into sections instead of chapters). 
+Although this report is rather short, the book form is used, so the students can get a tutorial and training for how to write and organize a text like a bachelor's thesis or a longer report.  
+
+In the following chapter, the usual parts of such a written work are mentioned. 
+
+%%% MISSING 
+
+In this chapter, we try to explain the different elements of a book, report or thesis. In the document \hyperlink{https://tug.org/pracjourn/2008-1/mori/mori.pdf}{Writing a thesis with \LaTeX} there are many more good hints.
+
+%%% MISSING 
+The pages in the frontmatter are usually numbered using roman numbers, i.e., i, ii, iii, iv, \ldots, or I, II, III, IV, \ldots In the document class \texttt{book}, this can be achieved in \LaTeX using the command 
+\texttt{\textbackslash frontmatter}. This also removes numbering from the chapters in the frontmatter.
+%%% MISSING 
+Either the whole front page is used as a titlepage, or the title starts on top of the first page of text. The title, author, and possibly date is usually achieved using the commands \texttt{\textbackslash title\{\}}, \texttt{\textbackslash author\{\}} and possibly \texttt{\textbackslash date\{\}} in the preamble and then invoking \texttt{\textbackslash maketitle} after the document starts. The options \texttt{titlepage} and \texttt{notitlepage} to the document class are often useful. 
+
+%%% MISSING 
+A possible dedication might follow the title --- or can be as plain text in a foreword. 
+There is no predefined environment for dedications.
+
+%%% MISSING 
+The abstract is containing a short, concise description of the content of the material, which gives the reader a hint of possible relevance of the material to the reader. About ten lines is usually a good guideline for the length of an abstract. 
+For books, an abstract is often not provided. 
+But for article, reports, and theses they are almost always required. 
+Since the environment \texttt{abstract} is not defined in the \texttt{book} document class, it has to be manually defined whenever needed (in the \texttt{book} document class). 
+
+%%% MISSING 
+For longer texts, it is common to include a table of contents --- and sometimes also list of figures, list of tables, list of symbols etc. 
+The commands \texttt{\textbackslash tableofcontents}, \texttt{\textbackslash listoffigures}, and \texttt{\textbackslash listoftables} can be used for producing such lists. To change the heading of the table of contents, redefine it: \texttt{\textbackslash renewcommand\{\textbackslash contentsname\}\{Whatever\}} right before the command 
+\texttt{\textbackslash tableofcontents}.
+
+To add the table of contents to the table of contents, write \\
+\texttt{\textbackslash cleardoublepage\textbackslash addcontentsline\{toc\}\{chapter\}\{Contents\}}\\
+(if the chapters start on right hand side). 
+
+Usually the table of contents comes either right before or right after the foreword or preface. 
+
+%%% MISSING 
+The foreword (or preface) often consists of the author's personal opinion, the history of how the work emerged, how the work is structured, how the reader can choose to read it etc. It might also contain dedications, acknowledgements and similar things --- as mentioned above. 
+
+%%% MISSING 
+The pages in the mainmatter are usually numbered using arabic numbers, i.e., 1, 2, 3, 4, \ldots In the document class \texttt{book}, this can be achieved in \LaTeX using the command 
+\texttt{\textbackslash mainmatter}. This also reintroduces the numbering to the chapters.
+
+%%% MISSING 
+Inner chapters and numbered and structured using \texttt{\textbackslash chapter}, \texttt{\textbackslash section} and \texttt{\textbackslash subsection}. 
+
+
+%%% MISSING 
+
+Inner cross references can be done using the commands \texttt{\textbackslash label} and \texttt{\textbackslash ref}. In Subsections~\MISSINGCOMMAND and \MISSINGCOMMAND, one can read about citations and external links. 
+
+%%% MISSING 
+For citations, the Bib\TeX functionality can be used. To cite, one usually uses the command \texttt{\textbackslash cite}, like: ``According to \MISSINGCOMMAND,  Faroese men are presented with lower sperm Y:X ratio than Greenland Inuit and Swedish fishermen.'' Or like this: ``From \MISSINGCOMMAND, we cite the following:
+\begin{quote}
+The Y:X chromosome ratios in this study differed between the Inuit men (0.513) and the men in both Poland (0.503) and Ukraine (0.508). A previous study, using the same populations, found Y:X chromosome ratios of 0.512 for the Inuit, 0.503 for Poland and 0.507 for Ukraine
+\end{quote}
+which directly connects to above mentioned rates.''
+In \\
+\url{https://en.wikibooks.org/wiki/LaTeX/More_Bibliographies}\\ 
+the commands \texttt{\textbackslash citep} and \texttt{\textbackslash citet} are explained, that can produce citations in styles like ``(Kvist et al. 2014)'', that are often used in humanities. 
+
+%%% MISSING 
+
+External links can be produced using the \texttt{\textbackslash url} and \texttt{\textbackslash hyperlink} commands. 
+
+%%% MISSING 
+
+\LaTeX is well suited for mathematical notation, see e.g.\\ \url{https://en.wikibooks.org/wiki/LaTeX/Mathematics}\\
+for some references on how to do that. 
+It is also possible to write numbered equations
+%%% MISSING 
+and refer to it like this: Equation~\MISSINGCOMMAND. 
+
+
+%%% MISSING 
+To start appendices, the command \texttt{\textbackslash appendix} often comes in handy. This will change the chapter numberings to Appendix A, Appendix B, Appendix C, Appendix D, \ldots.
+
+%%% MISSING 
+The backmatter is started using \texttt{\textbackslash backmatter}. This usually consists of at least the bibliography/literature/references. Also things like indices and list of acronyms might go here. We will only mention the bibliography. 
+
+%%% MISSING 
+The bibliography is produced using the Bib\TeX program. To get the present style, just write 
+\begin{verbatim}
+\bibliographystyle{plain}
+\bibliography{bibinnlating.bib}
+\end{verbatim}
+where bibinnlating.bib is the name of the bibliographic database containing all the bibliographic data. 
+
+If one wants to change the title of the bibliography or include it in the table of contents, follow the strategy from Subection~\MISSINGCOMMAND.
+
+%%% MISSING 
+This is an appendix. Some times they come after the bibliography and the pages are numbered A.1, A.2, \ldots, B.1, B.2,\ldots, and other times they come before the bibliography and continue the pagenumbering. 
+%%% MISSING 
+\end{document}
